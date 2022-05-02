@@ -23,6 +23,7 @@ body {
     position: relative;
     display: grid;
     grid-template-rows: 100px 1fr;
+    color: #fff;
 }
 /* para que no tenga problemas con el clipPath */
 .hero::before {
@@ -39,4 +40,63 @@ body {
 }
 .nav {
     --padding-container:0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav__title {
+    font-weight: 300;
+}
+.nav__items {
+    list-style: none;
+}
+.nav__link {
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+.nav__links {
+    color: #fff;
+    text-decoration: none;
+}
+.nav__menu {
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+.nav__img {
+    display: block;
+    width: 30px;
+}
+.nav__close {
+    display: var(--show, none);
+}
+/* hero container */
+.hero__container {
+    max-width: 800px;
+    --padding-container:0;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: center;
+}
+.hero__title {
+    font-size: 3rem;
+}
+.hero__paragraph {
+    margin-bottom: 20px;
+}
+.cta {
+    display: inline-block;
+    background-color: #2091F9;
+    justify-self: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 32px;
 }
